@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>checkerboard</title>
+	<style type="text/css">
+			.redbox{
+			margin: -2px;
+			height: 20px;
+			width: 20px;
+			background-color: red;
+			display: inline-block;
+		}
+		.blackbox{
+			margin: -2px;
+			height: 20px;
+			width: 20px;
+			background-color: black;
+			display: inline-block;
+
+		}
+	</style>
+</head>
+<body>
+	{% for r in range(0, x//2) %}
+<div class= "row">
+	{% for i in range(0, y//2) %}
+	<div class="redbox"></div>
+	<div class="blackbox"></div>
+	{% endfor %}
+</div>
+<div class="row">
+	{% for i in range(0, y//2) %}
+	<div class="blackbox"></div>
+	<div class="redbox"></div>
+	{% endfor %}
+</div>
+	{% endfor %}
+</body>
+</html>
